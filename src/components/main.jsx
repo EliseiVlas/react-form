@@ -20,8 +20,8 @@ export default function Main() {
         e.preventDefault();
 
         const nuovoElemento = {
-            id: marchiMacchine.length + 1, // Genera un ID incrementale
-            title: nuovoMarchio.charAt(0).toUpperCase() + nuovoMarchio.slice(1), // Capitalizza la prima lettera
+            id: marchiMacchine.length === 0 ? 1 : marchiMacchine[marchiMacchine.length - 1].id + 1,
+            title: nuovoMarchio // Capitalizza la prima lettera
           };
         // modifica 
         aggiungiMarchio([...marchiMacchine, nuovoElemento]);
